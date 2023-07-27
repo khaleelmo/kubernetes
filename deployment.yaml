@@ -18,8 +18,8 @@ spec:
         app: nginx-deployment
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: first-app
+        name: first-app
         ports:
         - containerPort: 80        
         resources: {}
