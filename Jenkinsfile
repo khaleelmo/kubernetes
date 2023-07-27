@@ -5,11 +5,12 @@ pipeline {
   }
   agent any
   stages {
-  /*  stage('Checkout Source') {
+    stage('Checkout Source') {
       steps {
-        git 'https://github.com/Bravinsimiyu/jenkins-kubernetes-deployment.git'
+       git branch: 'main', url: 'https://github.com/khaleelmo/kubernetes.git'
       }
     }
+    /*
     stage('Build image') {
       steps{
         script {
@@ -29,10 +30,12 @@ pipeline {
         }
       }
     } */
-    stage('Deploying React.js container to Kubernetes') {
+    stage('Deploying  container to Kubernetes') {
       steps {
         script {
           kubernetesDeploy(configs: "deployment.yaml", "service.yaml")
+          
+          //bat ("kubectl apply -f .")
         }
       }
     }
