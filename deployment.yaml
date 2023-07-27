@@ -18,7 +18,7 @@ spec:
         app: nginx-deployment
     spec:
       containers:
-      - image: first-app
+      - image: hi2khaleel/first-app
         name: first-app
         ports:
         - containerPort: 80        
