@@ -4,7 +4,7 @@ metadata:
 spec:
   selector:
     app: nginx-deployment 
-  type: NodePort #Type of the Kubernetes Service
+  type: LoadBalancer #Type of the Kubernetes Service
   ports:
   - protocol: TCP
     port: 80 #Service port
